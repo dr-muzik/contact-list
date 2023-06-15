@@ -1,0 +1,101 @@
+@mixin input() {
+  all: unset;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 5px;
+}
+
+.layout {
+  background-color: white;
+  border-radius: 20px;
+  padding: 8px 10px;
+  height: 540px;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .middle {
+    padding: 20px;
+    text-align: center;
+  }
+  .bottom {
+    .memory {
+      display: flex;
+      gap: 1rem;
+      margin-block-end: 20px;
+      .memory_left {
+      }
+
+      .memory_right {
+        padding-inline-start: 10px;
+      }
+    }
+    .name {
+      display: flex;
+      gap: 1rem;
+      margin-block-end: 20px;
+      .name_left {
+        display: flex;
+        align-items: center;
+      }
+
+      .name_right {
+        padding-inline-start: 13px;
+
+        .name_right_up {
+          & > input {
+            @include input();
+            &:focus {
+              border-bottom: 2px solid green;
+            }
+          }
+        }
+        .name_right_down {
+          & > input {
+            @include input();
+            &:focus {
+              border-bottom: 2px solid green;
+            }
+          }
+        }
+      }
+    }
+
+    .number {
+      display: flex;
+      gap: 1rem;
+      margin-block-end: 20px;
+      .number_left {
+      }
+
+      .number_right {
+        padding-inline-start: 10px;
+        & > input {
+          @include input();
+          &:focus {
+            border-bottom: 2px solid green;
+          }
+        }
+      }
+    }
+
+    .mail {
+      display: flex;
+      gap: 1rem;
+      margin-block-end: 20px;
+      .mail_left {
+      }
+
+      .mail_right {
+        padding-inline-start: 10px;
+        & > input {
+          @include input();
+          &:focus {
+            border-bottom: 2px solid green;
+          }
+        }
+      }
+    }
+  }
+}

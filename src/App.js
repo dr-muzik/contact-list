@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import { useState } from "react";
+import "./App.css";
+import "./Styles/index.scss";
+import "./Styles/helpers.scss";
+import ContactLists from "./Component/ContactLists";
+// import Footer from "./Component/Footer";
+
+import Contact from "./Component/Contact";
+
+import Test from "./Component/Test";
+// import DUMMY_DATA from "./DUMMY_DATA.json";
 
 function App() {
+  const [showContact, setShowContact] = useState(false);
+
+  const [details, setDetails] = useState(null);
+
+  const contactHandler = (el) => {
+    setShowContact(true);
+    setDetails(el);
+    // console.log(details);
+  };
+
+  const logoutHandler = () => {
+    setShowContact(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        {/* <Test /> */}
+        {!showContact && <ContactLists getDetails={contactHandler} />}
+        {showContact && (
+          <Contact goBack={logoutHandler} contact={details} />
+        )}{" "}
+        {/* {!isActive && <NewContact />} */}
+      </main>
     </div>
   );
 }

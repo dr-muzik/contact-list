@@ -1,0 +1,14 @@
+.icons {
+  text-align: center;
+  position: sticky;
+  top: -10px;
+  //   border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  padding-inline: 8px;
+  .left {
+    text-align: right;
+  }
+}

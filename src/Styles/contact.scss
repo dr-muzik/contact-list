@@ -1,0 +1,36 @@
+.contact_detail {
+  padding: 10px;
+  .phone {
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 8px 0;
+    background-color: white;
+    .name {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+      .icon_heading {
+        display: flex;
+        gap: 3rem;
+        button {
+          border: none;
+          background-color: white;
+          padding-inline-start: 20px;
+          cursor: pointer;
+        }
+      }
+      .name_picholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      height: 30vh;
+      border-block-end: 2px solid red;
+    }
+    .data {
+      height: 54vh;
+      overflow-y: auto;
+      padding-inline-start: 10px;
+    }
+  }
+}

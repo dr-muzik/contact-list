@@ -1,0 +1,22 @@
+.layout {
+  .header {
+    display: flex;
+    gap: 2rem;
+    .back {
+      height: max-content;
+    }
+    .input {
+      border-radius: 20px;
+      border: 1px solid gray;
+      height: max-content;
+      width: 80%;
+      padding-block: 2px;
+      input {
+        all: unset;
+        border: none;
+        width: 210px;
+        font-size: 13px;
+      }
+    }
+  }
+}
